@@ -1,0 +1,40 @@
+sulu_product.products:
+    type: rest
+    resource: Sulu\Bundle\ProductBundle\Controller\ProductController
+
+sulu_product.variants:
+    type: rest
+    parent: sulu_product.products
+    resource: Sulu\Bundle\ProductBundle\Controller\VariantController
+
+sulu_product.product_variant_attributes:
+    type: rest
+    parent: sulu_product.products
+    resource: Sulu\Bundle\ProductBundle\Controller\ProductVariantAttributeController
+
+sulu_product_base.attributes:
+    type: rest
+    resource: Sulu\Bundle\ProductBundle\Controller\AttributeController
+
+sulu_product_base.attribute_values:
+    type: rest
+    resource: Sulu\Bundle\ProductBundle\Controller\ValueController
+    parent: sulu_product_base.attributes
+
+sulu_product.media:
+    type: rest
+    parent: sulu_product.products
+    resource: Sulu\Bundle\ProductBundle\Controller\ProductMediaController
+
+sulu_product.content:
+    type: rest
+    parent: sulu_product.products
+    resource: Sulu\Bundle\ProductBundle\Controller\ProductContentController
+
+sulu_product.product_addons:
+    type: rest
+    resource: Sulu\Bundle\ProductBundle\Controller\AddonController
+
+sulu_product.currencies:
+    type: rest
+    resource: Sulu\Bundle\ProductBundle\Controller\CurrencyController

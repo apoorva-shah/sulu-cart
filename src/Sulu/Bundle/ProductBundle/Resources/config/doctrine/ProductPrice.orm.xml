@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="Sulu\Bundle\ProductBundle\Entity\ProductPrice" table="pr_product_prices">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+
+        <field name="minimumQuantity" type="decimal" nullable="true" column="minimumQuantity">
+            <options>
+                <option name="default">0</option>
+            </options>
+        </field>
+
+        <field name="price" type="float" column="price"/>
+
+        <many-to-one target-entity="Sulu\Bundle\ProductBundle\Entity\ProductInterface"
+                     field="product" inversed-by="prices">
+            <join-column name="idProducts" referenced-column-name="id" on-delete="CASCADE"/>
+        </many-to-one>
+        <many-to-one target-entity="Sulu\Bundle\ProductBundle\Entity\Currency" field="currency">
+            <join-column name="idCurrencies" referenced-column-name="id"/>
+        </many-to-one>
+    </entity>
+</doctrine-mapping>

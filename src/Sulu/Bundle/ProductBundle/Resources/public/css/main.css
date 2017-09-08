@@ -1,0 +1,45 @@
+/* line 1, ../scss/basic.scss */
+.is-hidden {
+  display: none !important;
+}
+
+/* line 1, ../scss/modules/import.scss */
+.import-info {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #999999;
+}
+/* line 5, ../scss/modules/import.scss */
+.import-info .title {
+  font-size: 24px;
+}
+/* line 8, ../scss/modules/import.scss */
+.import-info strong {
+  font-weight: bold;
+}
+/* line 11, ../scss/modules/import.scss */
+.import-info p {
+  margin: 15px 0;
+}
+
+/* line 1, ../scss/modules/variant-overlay.scss */
+.form-text {
+  display: table-cell;
+  vertical-align: middle;
+  height: 30px;
+}
+
+/* line 8, ../scss/modules/variant-overlay.scss */
+.vertical-centered-checkbox-group label {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
+
+/* line 15, ../scss/modules/variant-overlay.scss */
+.warning-message {
+  padding: 10px 105px 40px;
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+}
